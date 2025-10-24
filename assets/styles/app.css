@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'Roboto', open-sans;
+  font-family: "Roboto", open-sans;
 }
 
 body {
@@ -17,6 +17,10 @@ header {
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   width: 100%;
+}
+
+#results h2 {
+  white-space: pre;
 }
 
 #results,
