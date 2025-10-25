@@ -16,3 +16,25 @@ Question : What is Shadowing?
 Answer :
 It is a process by which we can declare the same variable again that 
 declared outside of the function.
+
+# Project Javascript Definition :
+
+* Created a vendor.js file.
+* Retrieved required elements of HTML file using document object and getElementById() method
+inside vendor.js.
+* Created a function that changes the text-content of some HTML elements 
+dynamically.
+
+* Created an app.js file.
+* Created some helper functions one of which returns the user input data 
+and the other one writes a description or calculation log and also it invokes 
+the function defined inside the vendor.js file with the required arguments 
+being provided. 
+* Also, refactor the code for code reuse.
+* Also created some functions for different operations like addition, subtraction, 
+multiplication and division, and defined the logic inside of it as a function body.
+
+* At last added some meaningful comments to the code.
+
+* And thus became an unconventional calculator as it works slightly 
+different from the conventional calculator.
