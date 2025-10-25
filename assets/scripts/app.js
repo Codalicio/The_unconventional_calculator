@@ -34,7 +34,7 @@ const multiply = () => {
 const divide = () => {
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;
-  currentResult = currentResult / enteredNumber;
+  currentResult = parseInt(currentResult / enteredNumber);
   createAndWriteOutput("/", initialResult, enteredNumber);
 };
 
