@@ -1,11 +1,13 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
 
+// Gets input from input field
 const getUserNumberInput = () => parseInt(userInput.value);
 
+// A helper function that generates and write calculation log
 const createAndWriteOutput = (operator, resultBeforeCalc, calcNumber) => {
   const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`;
-  outputResult(currentResult, calcDescription);
+  outputResult(currentResult, calcDescription); // from vendor.js
 };
 
 const add = () => {
