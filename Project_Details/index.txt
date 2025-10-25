@@ -4,5 +4,11 @@ Github Pages Link : https://codalicio.github.io/The_unconventional_calculator/
 
 Github repo Link : https://github.com/Codalicio/The_unconventional_calculator
 
-Notes : In Javascript, code is parsed, compiled and executed from top
+Notes : 
+
+In Javascript, code is parsed, compiled and executed from top
 to bottom!
+
+You can't use local/block-scope variables/constants(i.e., declared inside 
+of functions) outside of that particular function!
+
