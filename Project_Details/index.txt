@@ -12,3 +12,7 @@ to bottom!
 You can't use local/block-scope variables/constants(i.e., declared inside 
 of functions) outside of that particular function!
 
+Question : What is Shadowing?
+Answer :
+It is a process by which we can declare the same variable again that 
+declared outside of the function.
