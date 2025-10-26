@@ -13,21 +13,21 @@ const createAndWriteOutput = (operator, resultBeforeCalc, calcNumber) => {
 const add = () => {
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;
-  currentResult = currentResult + enteredNumber;
+  currentResult += enteredNumber;
   createAndWriteOutput("+", initialResult, enteredNumber);
 };
 
 const subtract = () => {
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;
-  currentResult = currentResult - enteredNumber;
+  currentResult -= enteredNumber;
   createAndWriteOutput("-", initialResult, enteredNumber);
 };
 
 const multiply = () => {
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;
-  currentResult = currentResult * enteredNumber;
+  currentResult *= enteredNumber;
   createAndWriteOutput("*", initialResult, enteredNumber);
 };
 
