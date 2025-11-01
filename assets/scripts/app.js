@@ -11,19 +11,28 @@ const createAndWriteOutput = (operator, resultBeforeCalc, calcNumber) => {
   outputResult(currentResult, calcDescription); // from vendor.js
 };
 
+const writeToLog = (
+  operationIdentifier,
+  prevResult,
+  operationNumber,
+  newResult
+) => {
+  const logs = {
+    operation: operationIdentifier,
+    prevResult: prevResult,
+    number: operationNumber,
+    result: newResult,
+  };
+  logEntries.push(logs);
+  console.log(logEntries);
+};
+
 const add = () => {
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;
   currentResult += enteredNumber;
   createAndWriteOutput("+", initialResult, enteredNumber);
-  const logs = {
-    operation: "ADD",
-    prevResult: initialResult,
-    number: enteredNumber,
-    result: currentResult,
-  };
-  logEntries.push(logs);
-  console.log(logEntries);
+  writeToLog("ADD", initialResult, enteredNumber, currentResult);
 };
 
 const subtract = () => {
@@ -31,14 +40,7 @@ const subtract = () => {
   const initialResult = currentResult;
   currentResult -= enteredNumber;
   createAndWriteOutput("-", initialResult, enteredNumber);
-  const logs = {
-    operation: "SUBTRACT",
-    prevResult: initialResult,
-    number: enteredNumber,
-    result: currentResult,
-  };
-  logEntries.push(logs);
-  console.log(logEntries);
+  writeToLog("SUBTRACT", initialResult, enteredNumber, currentResult);
 };
 
 const multiply = () => {
@@ -46,14 +48,7 @@ const multiply = () => {
   const initialResult = currentResult;
   currentResult *= enteredNumber;
   createAndWriteOutput("*", initialResult, enteredNumber);
-  const logs = {
-    operation: "MULTIPLY",
-    prevResult: initialResult,
-    number: enteredNumber,
-    result: currentResult,
-  };
-  logEntries.push(logs);
-  console.log(logEntries);
+  writeToLog("MULTIPLY", initialResult, enteredNumber, currentResult);
 };
 
 const divide = () => {
@@ -61,14 +56,7 @@ const divide = () => {
   const initialResult = currentResult;
   currentResult = parseFloat(currentResult / enteredNumber).toFixed(2);
   createAndWriteOutput("/", initialResult, enteredNumber);
-  const logs = {
-    operation: "DIVIDE",
-    prevResult: initialResult,
-    number: enteredNumber,
-    result: currentResult,
-  };
-  logEntries.push(logs);
-  console.log(logEntries);
+  writeToLog("DIVIDE", initialResult, enteredNumber, currentResult);
 };
 
 addBtn.addEventListener("click", add);
