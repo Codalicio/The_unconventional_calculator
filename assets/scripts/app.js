@@ -31,6 +31,14 @@ const subtract = () => {
   const initialResult = currentResult;
   currentResult -= enteredNumber;
   createAndWriteOutput("-", initialResult, enteredNumber);
+  const logs = {
+    operation: "SUBTRACT",
+    prevResult: initialResult,
+    number: enteredNumber,
+    result: currentResult,
+  };
+  logEntries.push(logs);
+  console.log(logEntries);
 };
 
 const multiply = () => {
@@ -38,6 +46,14 @@ const multiply = () => {
   const initialResult = currentResult;
   currentResult *= enteredNumber;
   createAndWriteOutput("*", initialResult, enteredNumber);
+  const logs = {
+    operation: "MULTIPLY",
+    prevResult: initialResult,
+    number: enteredNumber,
+    result: currentResult,
+  };
+  logEntries.push(logs);
+  console.log(logEntries);
 };
 
 const divide = () => {
@@ -45,6 +61,14 @@ const divide = () => {
   const initialResult = currentResult;
   currentResult = parseFloat(currentResult / enteredNumber).toFixed(2);
   createAndWriteOutput("/", initialResult, enteredNumber);
+  const logs = {
+    operation: "DIVIDE",
+    prevResult: initialResult,
+    number: enteredNumber,
+    result: currentResult,
+  };
+  logEntries.push(logs);
+  console.log(logEntries);
 };
 
 addBtn.addEventListener("click", add);
