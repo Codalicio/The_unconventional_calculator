@@ -34,16 +34,17 @@ function calculateResult(calculationType) {
   if (calculationType === "ADD") {
     currentResult += enteredNumber;
     mathOperator = "+";
+  } else if (calculationType === "SUBTRACT") {
+    currentResult -= enteredNumber;
+    mathOperator = "-";
   } else if (calculationType === "MULTIPLY") {
     currentResult *= enteredNumber;
     mathOperator = "*";
   } else if (calculationType === "DIVIDE") {
     currentResult = parseFloat(currentResult / enteredNumber).toFixed(2);
     mathOperator = "/";
-  } else {
-    currentResult -= enteredNumber;
-    mathOperator = "-";
   }
+
   createAndWriteOutput(mathOperator, initialResult, enteredNumber);
   writeToLog(calculationType, initialResult, enteredNumber, currentResult);
 }
